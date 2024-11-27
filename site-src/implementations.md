@@ -37,7 +37,7 @@ cover, and documentation to help users get started.
 - [Kuma][11] (GA)
 - [LiteSpeed Ingress Controller][19]
 - [NGINX Gateway Fabric][12] (GA)
-- [ngrok][33] (preview)
+- [ngrok][33] (beta)
 - [STUNner][21] (beta)
 - [Traefik Proxy][13] (GA)
 - [Tyk][29] (work in progress)
@@ -279,7 +279,7 @@ FSM support of Gateway API is built on top [Flomesh Gateway API](fgw) and it cur
 [Gloo Gateway][gloogateway] by [Solo.io][solo] is a feature-rich, Kubernetes-native ingress controller and next-generation API gateway.
 Gloo Gateway brings the full power and community support of Gateway API to its existing control-plane implementation.
 
-The Gloo Gateway ingress controller passes all the core Gateway API conformance tests in the v1.1.0 release for the GATEWAY_HTTP conformance 
+The Gloo Gateway ingress controller passes all the core Gateway API conformance tests in the v1.1.0 release for the GATEWAY_HTTP conformance
 profile except `HTTPRouteServiceTypes`.
 
 [gloogateway]:https://docs.solo.io/gateway/latest/
@@ -445,13 +445,14 @@ If you have any suggestions or experience issues with NGINX Gateway Fabric, plea
 
 [ngrok Kubernetes Operator][ngrok-k8s-operator] provides an implementation of the Gateway API that uses [ngrok's ingress-as-a-service][ngrok]. This project uses the Gateway API to support routing traffic from ngrok's global network to applications running on Kubernetes clusters. This easily adds the benefits of ngrok, like security, network policy, and a global presence with the simplicity of cloud service. The operator contains both a Gateway API implementation as well as a controller using Kubernetes Ingress. The Gateway API implementation is currently under development and supports only the Gateway, GatewayClass and HTTPRoute. As the TLSRoute and TCPRoute move from experimental to stable, they will also be implemented.
 
-You can read our [docs][ngrok-k8s-gwapi-docs] for more information. If you have any feature requests or bug reports, please [create an issue][ngrok-issue-new]. You can also reach out for help on [Slack][ngrok-slack]
+You can read our [docs][ngrok-k8s-gwapi-docs] for more information. If you have any feature requests or bug reports, please [create an issue][ngrok-issue-new]. You can also reach out for help in our [ngrok Community Discussions][ngrok-community]
 
-[ngrok-k8s-operator]:https://github.com/ngrok/kubernetes-ingress-controller
+[ngrok-k8s-operator]:https://github.com/ngrok/ngrok-operator
+[ngrok-artifacthub]:https://artifacthub.io/packages/helm/ngrok/ngrok-operator
 [ngrok]:https://ngrok.com
 [ngrok-k8s-gwapi-docs]:https://ngrok.com/docs/k8s/
-[ngrok-issue-new]: https://github.com/ngrok/kubernetes-ingress-controller/issues/new
-[ngrok-slack]:https://ngrokcommunity.slack.com/channels/general
+[ngrok-issue-new]:https://github.com/ngrok/ngrok-operator/issues/new
+[ngrok-community]:https://github.com/ngrok/ngrok
 
 ### STUNner
 
